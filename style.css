@@ -1,0 +1,213 @@
+/* VARIABLES Y RESETEO BASE */
+:root {
+    --verde-oscuro: #0F3D3E;
+    --verde-medio: #16575A;
+    --dorado: #E8C468;
+    --texto-principal: #26312F;
+    --texto-suave: #5A6664;
+    --fondo-claro: #F6F5F1;
+    --borde: #DDD9CC;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--texto-principal);
+    background: var(--fondo-claro);
+    line-height: 1.5;
+}
+
+h1,
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+}
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    display: flex;
+    max-width: 1100px;
+    margin: 30px auto;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    min-height: 100vh;
+}
+/* BARRA LATERAL */
+.barra-lateral {
+    width: 300px;
+    background: var(--verde-oscuro);
+    color: #EFEAE0;
+    padding: 40px 28px;
+}
+/* FOTO*/
+.foto-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.foto {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    border: 3px solid var(--dorado);
+    object-fit: cover;
+}
+
+/* DATOS PERSONALES */
+.datos-personales h1 {
+    font-size: 29px;
+    line-height: 1.25;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 8px;
+}
+.cargo {
+    text-align: center;
+    color: var(--dorado);
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
+}
+/* INFORMACIÓN PERSONAL */
+.info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 11px;
+}
+.etiqueta {
+    color: var(--dorado);
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+/* HABILIDADES */
+.habilidades {
+    margin-top: 34px;
+}
+.habilidades h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.habilidades ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+}
+.habilidades li {
+    padding: 7px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+/* CONTENIDO PRINCIPAL */
+.contenido {
+    flex: 1;
+    padding: 40px 45px;
+}
+.seccion {
+    margin-bottom: 34px;
+}
+.seccion h2 {
+    font-size: 23px;
+    color: var(--verde-oscuro);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--dorado);
+    margin-bottom: 20px;
+}
+/* ELEMENTOS DE ESTUDIOS Y EXPERIENCIA */
+.item {
+    margin-bottom: 21px;
+}
+.item-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.item-titulo {
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--texto-principal);
+}
+.item-fecha {
+    font-size: 13px;
+    color: var(--texto-suave);
+}
+.item-lugar {
+    font-style: italic;
+    color: var(--verde-medio);
+    margin: 3px 0 7px 0;
+    font-size: 14px;
+}
+
+.item p {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* CAPACITACIONES */
+.lista-capacitaciones {
+    padding-left: 20px;
+    margin: 0;
+}
+.lista-capacitaciones li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/*  TABLA DE REFERENCIAS */
+.tabla-referencias {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    table-layout: fixed;
+}
+.tabla-referencias th {
+    background: var(--verde-oscuro);
+    color: #ffffff;
+    text-align: left;
+    padding: 10px;
+    font-weight: 600;
+}
+.tabla-referencias td {
+    padding: 10px;
+    border-bottom: 1px solid var(--borde);
+    word-break: break-word;
+}
+.tabla-referencias tbody tr:nth-child(even) {
+    background: var(--fondo-claro);
+}
+
+/* DISEÑO PARA PANTALLAS PEQUEÑAS */
+@media (max-width: 720px) {
+    .contenedor {
+        flex-direction: column;
+        margin: 0;
+    }
+    .barra-lateral {
+        width: auto;
+    }
+    .contenido {
+        padding: 30px 25px;
+    }
+    .item-encabezado {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .tabla-referencias {
+        font-size: 10px;
+    }
+    .tabla-referencias th,
+    .tabla-referencias td {
+        padding: 7px;
+    }
+}
